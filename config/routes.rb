@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
-  resources :properties
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  root to: 'home#index'
+  
+  resources :property_types, only: [:show, :new, :create]
+  resources :properties, only: [:show, :new, :create]
 end

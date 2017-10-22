@@ -1,0 +1,9 @@
+<h1>Cadastrar Tipo de Imóvel</h1>
+
+<%= form_for(@property_type) do |f| %>
+    <%= f.label :name, 'Nome' %>
+    <%= f.text_field :name %>
+
+    <%= f.submit 'Cadastrar' %>
+<% end %>
+  

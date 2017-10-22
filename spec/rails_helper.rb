@@ -2,9 +2,9 @@
 require 'spec_helper'
 ENV['RAILS_ENV'] ||= 'test'
 
+require 'capybara/rspec'
 require 'simplecov'
 SimpleCov.start
-require 'capybara/rspec'
 
 require File.expand_path('../../config/environment', __FILE__)
 # Prevent database truncation if the environment is production

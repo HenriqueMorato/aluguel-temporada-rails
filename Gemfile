@@ -41,7 +41,7 @@ end
 
 group :test do
   gem 'simplecov', require: false
-  require 'capybara/rspec'
+  gem 'capybara'
 end
 
 group :development do
