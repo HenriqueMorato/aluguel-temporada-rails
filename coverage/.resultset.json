@@ -224,26 +224,26 @@
         null,
         null,
         1,
-        1,
+        2,
         null,
         null,
         1,
-        1,
-        1,
+        2,
+        2,
         1,
         1,
         null,
-        0,
-        null,
-        null,
-        null,
         1,
-        1,
-        1,
+        null,
         null,
         null,
         1,
         1,
+        1,
+        null,
+        null,
+        1,
+        2,
         null,
         null
       ],
@@ -260,6 +260,12 @@
         1,
         null,
         1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
         1,
         null,
         null
@@ -330,6 +336,9 @@
       ],
       "/Users/HenriqueMorato/CampusCode/Aluguel-Temporada/app/models/property_type.rb": [
         1,
+        1,
+        null,
+        null,
         null
       ],
       "/Users/HenriqueMorato/CampusCode/Aluguel-Temporada/app/controllers/home_controller.rb": [
@@ -339,6 +348,6 @@
         null
       ]
     },
-    "timestamp": 1508704834
+    "timestamp": 1508706851
   }
 }

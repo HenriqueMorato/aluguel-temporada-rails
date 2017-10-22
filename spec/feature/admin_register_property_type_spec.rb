@@ -16,6 +16,6 @@ feature 'Admin Register Property Type' do
     visit new_property_type_path
     click_on 'Cadastrar'
 
-    expect(page).to have_content 'Você deve preencher o nome da propriedade'    
+    expect(page).to have_content 'Você deve informar o nome do tipo do imóvel'    
   end
 end
