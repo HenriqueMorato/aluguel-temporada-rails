@@ -36,6 +36,18 @@ feature 'Owner Register Property' do
     expect(page).to have_content '15'
     expect(page).to have_content 'Proibido cão e crianças'
     expect(page).to have_css("img[src*='http://via.placeholder.com/600x500']")
+  end
+  scenario 'and fills nothing' do
+    
+    property_type = PropertyType.create!(name: 'Casa de Praia')
+    
+    visit new_property_path
 
+    click_on 'Cadastrar'
+    
+    expect(page).to have_content 'Você deve informar o Título'
+    expect(page).to have_content 'Você deve informar a Localização'
+    expect(page).to have_content 'Você deve informar o Quantidade de Quartos'
+    expect(page).to have_content 'Você deve informar o Preço da Diária'
   end
 end

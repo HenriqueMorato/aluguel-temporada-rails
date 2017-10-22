@@ -1,5 +1,13 @@
 <h1>Cadastrar Imóvel:</h1>
 
+<% if @property.errors.any? %>
+<ul>
+  <% @property.errors.messages.each do |message| %>
+    <li><%= message %></li>
+  <% end %>
+</ul>  
+<% end %>
+
 <%= form_for(@property) do |f| %>
   <%= f.label :title, 'Título' %>
   <%= f.text_field :title %>

@@ -6,8 +6,8 @@ class PropertiesController < ApplicationController
   end
 
   def new
-    @property = Property.new
     @property_types = PropertyType.all
+    @property = Property.new
   end
 
   def create
@@ -16,6 +16,7 @@ class PropertiesController < ApplicationController
       flash[:message] = 'Imóvel cadastrado com sucesso'
       redirect_to @property
     else
+      @property_types = PropertyType.all    
       render :new
     end
   end
