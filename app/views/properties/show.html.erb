@@ -1,0 +1,33 @@
+<h3><%= @property.title %></h3>
+<br />
+<p>Tipo do Imóvel</p>
+<%= @property.property_type.name %>
+
+<p>Localização</p>
+<%= @property.location %>
+
+<p>Área</p>
+<p><%= @property.area %>m²</p>
+
+<p>Descrição</p>
+<p><%= @property.description %>m²</p>
+
+<p>Valor da Diária</p>
+<%= number_to_currency(@property.daily_rate) %>
+
+<p>Quantidade de Quartos</p>
+<%= @property.rooms %>
+
+<p>Número mínimo de Diárias</p>
+<%= @property.minimum_rent_days %>
+
+<p>Número máximo de Diárias</p>
+<%= @property.maximum_rent_days %>
+
+<p>Número máximo de Ocupantes</p>
+<%= @property.maximum_occupancy %>
+
+<p>Regras de Uso</p>
+<%= @property.usage_rules %>
+
+<%= image_tag @property.photo %>

@@ -1,0 +1,43 @@
+<h1>Cadastrar Imóvel:</h1>
+
+<%= form_for(@property) do |f| %>
+  <%= f.label :title, 'Título' %>
+  <%= f.text_field :title %>
+
+  <%= f.label :property_type_id, 'Tipo do Imóvel'  %>
+  <%= f.collection_select(:property_type_id, @property_types, :id, :name) %>
+
+  <%= f.label :location, 'Localização' %>
+  <%= f.text_field :location %>
+
+  <%= f.label :area, 'Área' %>
+  <%= f.number_field :area %>m²
+
+  <%= f.label :description, 'Descrição' %>
+  <%= f.text_area :description %>
+
+  <%= f.label :daily_rate, 'Valor da Diária' %>
+  R$ <%= f.number_field :daily_rate, step: 0.5 %>
+
+  <%= f.label :rooms, 'Quantidade de Quartos' %>
+  <%= f.number_field :rooms %>
+
+  <%= f.label :minimum_rent_days, 'Número mínimo de Diárias' %>
+  <%= f.number_field :minimum_rent_days %>
+
+  <%= f.label :maximum_rent_days, 'Número máximo de Diárias' %>
+  <%= f.number_field :maximum_rent_days %>
+
+  <%= f.label :maximum_occupancy, 'Número máximo de Ocupantes' %>
+  <%= f.number_field :maximum_occupancy %>
+
+  <%= f.label :usage_rules, 'Regras de Uso' %>
+  <%= f.text_area :usage_rules %>
+
+  <%= f.label :photo, 'Foto' %>
+  <%= f.text_area :photo %>
+
+  <%= f.submit 'Cadastrar' %>
+
+<% end %>
+  

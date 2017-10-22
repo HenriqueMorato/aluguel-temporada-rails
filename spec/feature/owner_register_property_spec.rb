@@ -2,21 +2,21 @@ require 'rails_helper'
 
 feature 'Owner Register Property' do
   scenario 'sucessfully' do
+    property_type = PropertyType.create!(name: 'Casa de Praia')
+    
     visit root_path
     click_on 'Registrar Imóvel'
 
-    property_type = PropertyType.create(name: 'Casa de Praia')
-
     fill_in 'Título', with: 'Casa de praia muito bonita'
-    select 'Casa de Praia', from: 'Tipo do Imóvel'
+    select property_type.name, from: 'Tipo do Imóvel'
     fill_in 'Localização', with: 'Praia Grande'
     fill_in 'Área', with: 50
     fill_in 'Descrição', with: 'Pode vir que é garantido'
     fill_in 'Valor da Diária', with: 200.50
     fill_in 'Quantidade de Quartos', with: 2
-    fill_in 'Mínimo de Diárias', with: 1
-    fill_in 'Máximo de Diárias', with: 20
-    fill_in 'Ocupação Máxima', with: 15
+    fill_in 'Número mínimo de Diárias', with: 1
+    fill_in 'Número máximo de Diárias', with: 20
+    fill_in 'Número máximo de Ocupantes', with: 15
     fill_in 'Regras de Uso', with: 'Proibido cão e crianças'
     fill_in 'Foto', with: 'http://via.placeholder.com/600x500'
 
