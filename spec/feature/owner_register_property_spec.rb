@@ -12,7 +12,7 @@ feature 'Owner Register Property' do
     fill_in 'Localização', with: 'Praia Grande'
     fill_in 'Área', with: 50
     fill_in 'Descrição', with: 'Pode vir que é garantido'
-    fill_in 'Valor da Diária', with: 200.50
+    fill_in 'Valor da Diária em R$', with: 200.50
     fill_in 'Quantidade de Quartos', with: 2
     fill_in 'Número mínimo de Diárias', with: 1
     fill_in 'Número máximo de Diárias', with: 20

@@ -1,33 +1,83 @@
 <h3><%= @property.title %></h3>
 <br />
-<p>Tipo do Imóvel</p>
-<%= @property.property_type.name %>
-
-<p>Localização</p>
-<%= @property.location %>
-
-<p>Área</p>
-<p><%= @property.area %>m²</p>
-
-<p>Descrição</p>
-<p><%= @property.description %>m²</p>
-
-<p>Valor da Diária</p>
-<%= number_to_currency(@property.daily_rate) %>
-
-<p>Quantidade de Quartos</p>
-<%= @property.rooms %>
-
-<p>Número mínimo de Diárias</p>
-<%= @property.minimum_rent_days %>
-
-<p>Número máximo de Diárias</p>
-<%= @property.maximum_rent_days %>
-
-<p>Número máximo de Ocupantes</p>
-<%= @property.maximum_occupancy %>
-
-<p>Regras de Uso</p>
-<%= @property.usage_rules %>
-
-<%= image_tag @property.photo %>
+<dl class="dl-horizontal">
+  <dt>
+    <b><p>Tipo do Imóvel</p></b>
+  </dt>
+  <dd>
+    <%= @property.property_type.name %>
+  </dd>
+</dl>
+<dl class="dl-horizontal">
+  <dt>
+    <b><p>Localização</p></b>
+  </dt>
+  <dd>
+    <%= @property.location %>
+  </dd>
+</dl>
+<dl class="dl-horizontal">
+  <dt>
+    <b><p>Área</p></b>
+  </dt>
+  <dd>
+    <p><%= @property.area %>m²</p>
+  </dd>
+</dl>
+<dl class="dl-horizontal">
+  <dt>
+    <b><p>Descrição</p></b>
+  </dt>
+  <dd>
+    <p><%= @property.description %>m²</p>
+  </dd>
+</dl>
+<dl class="dl-horizontal">
+  <dt>
+    <b><p>Valor da Diária</p></b>
+  </dt>
+  <dd>
+    <%= number_to_currency(@property.daily_rate) %>
+  </dd>
+</dl>
+<dl class="dl-horizontal">
+  <dt>
+    <b><p>Quantidade de Quartos</p></b>
+  </dt>
+  <dd>
+    <%= @property.rooms %>
+  </dd>
+</dl>
+<dl class="dl-horizontal">
+  <dt>
+    <b><p>Número mínimo de Diárias</p></b>
+  </dt>
+  <dd>
+    <%= @property.minimum_rent_days %>
+  </dd>
+</dl>
+<dl class="dl-horizontal">
+  <dt>
+    <b><p>Número máximo de Diárias</p></b>
+  </dt>
+  <dd>
+    <%= @property.maximum_rent_days %>
+  </dd>
+</dl>
+<dl class="dl-horizontal">
+  <dt>
+    <b><p>Número máximo de Ocupantes</p></b>
+  </dt>
+  <dd>
+    <%= @property.maximum_occupancy %>
+  </dd>
+</dl>
+<dl class="dl-horizontal">
+  <dt>
+    <b><p>Regras de Uso</p></b>
+  </dt>
+  <dd>
+    <%= @property.usage_rules %>
+  </dd>
+</dl>
+<%= image_tag @property.photo, class:'rounded' %>
